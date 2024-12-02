@@ -1,87 +1,56 @@
-# Deepfake Detector App
+# Deepfake Detective - Fake Product Video Detection Web Application
 
-- [Deepfake Detector App](https://deep-fake-detection-m.streamlit.app/)
+A powerful web application built with Streamlit that leverages state-of-the-art deep learning models to detect product video deepfake videos. The application provides an intuitive interface for users to analyze videos and determine their authenticity.
 
-## ScreenShots
-![Streamlit - Google Chrome 16-01-2024 21_30_24](https://github.com/Sneh-T-Shah/deepfake-detection/assets/116267467/eccce6cc-b829-4f68-9dda-42da833a571a)
-![Streamlit - Google Chrome 16-01-2024 21_30_40](https://github.com/Sneh-T-Shah/deepfake-detection/assets/116267467/33e35488-d1ef-4c9a-825f-c2a1be5bae89)
-![Streamlit - Google Chrome 16-01-2024 21_50_22](https://github.com/Sneh-T-Shah/deepfake-detection/assets/116267467/4a2007ff-aeb4-48da-b4c6-2cec40b0ba89)
-![Streamlit - Google Chrome 16-01-2024 21_33_16](https://github.com/Sneh-T-Shah/deepfake-detection/assets/116267467/f3b42776-d7a6-4563-8fae-60abc4623965)
+[Live Demo](https://deep-fake-detection-m.streamlit.app/)
 
-## Table of Contents
+---
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [File Structure](#file-structure)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [Acknowledgments](#acknowledgments)
-- [Contact](#contact)
+## Key Features
 
-## Introduction
+### Core Functionality
+- **Video Analysis**: Upload and analyze MP4 videos for deepfake detection.
+- **Multi-Model Support**:
+  - EfficientNetB4
+  - EfficientNetB4ST
+  - EfficientNetAutoAttB4
+  - And more...
+- **Ensemble Predictions**: Select up to three models with customizable weights.
+- **Adjustable Parameters**:
+  - Detection threshold (0.0 to 1.0).
+  - Frame selection (0 to 100 frames).
+- **Real-time Results**: Immediate feedback with confidence scores.
 
-Welcome to the Deepfake Detector App repository! This Streamlit app is designed to detect deepfake content in images and videos using state-of-the-art models. It provides a user-friendly interface for uploading files and obtaining deepfake predictions with adjustable parameters.
+### Technical Features
+- Advanced face extraction using BlazeFace.
+- Support for multiple deep learning architectures.
+- Efficient video frame processing.
+- Automated model weight management.
 
-# Recommended parameters:
- - Model : **EfficientNetAutoAttB4**
- - Dataset: **DFDC**
+---
 
-## Features
+## Recommended Settings
+- **Model**: EfficientNetAutoAttB4ST.
+- **Dataset**: DFDC.
+- **Frames**: At least 50 for accurate detection.
+- **Threshold**: Default values unless specific requirements exist.
 
-- **File Type Selection**: Choose between uploading an image or a video for deepfake detection.
-- **Model Selection**: Select from various deepfake detection models, such as EfficientNetB4, EfficientNetB4ST, EfficientNetAutoAttB4, etc.
-- **Dataset Option**: Choose the dataset (DFDC or FFPP) used to train the deepfake detection model.
-- **Adjustable Threshold**: Set a threshold for deepfake probability to control sensitivity.
-- **Video Frame Selection**: If analyzing a video, choose the number of frames to process.
-- **Detailed Results**: Get detailed results with probabilities and visual cues indicating the likelihood of deepfake content.
-- **Project Information**: Display additional information about the project, such as credits, links to GitHub, and collaborators.
+---
 
 ## Installation
 
 1. Clone the repository:
+    git clone https://github.com/richisen/deepfake-detection.git
+    cd deepfake-detection
 
-```bash
-git clone https://github.com/Sneh-T-Shah/deepfake-detection.git
-cd deepfake-detection
-```
+2. Install dependencies:
+    pip install -r requirements.txt
 
-2. Install the required dependencies:
+3. Run the aplication:
+    streamlit run output.py
 
-```bash
-pip install -r requirements.txt
-```
+## Author
 
-## Usage
+Richik Vivek Sen
 
-Run the Streamlit app:
-```bash
-streamlit run app.py
-```
-Visit the provided local URL to access the app in your browser.
-
-## File Structure
-- app.py : Main Streamlit application script.
-- api.py : Contains functions for processing images and videos using deepfake detection models.
-- uploads/ : Folder to store uploaded files.
-- requirements.txt : List of Python dependencies.
-
-## Dependencies
-
-Find the dependencies here: https://github.com/Sneh-T-Shah/deepfake-detection/blob/main/requirements.txt
-
-## Contributing
-We welcome contributions! If you'd like to contribute to this project.
-
-
-## Acknowledgments
-Web app for this project is made by Sneh Shah and Pankil Soni.
-
-The original source for the deep-learning models is on the github reopsitory https://github.com/polimi-ispl/icpr2020dfdc
-
-## Contact
-For any query or feedback, please contact:
-
-- [Sneh shah](https://github.com/Sneh-T-Shah/)
-- [Pankil Soni](https://github.com/pankil-soni/)
+    

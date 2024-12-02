@@ -73,7 +73,14 @@ else:
 # Add additional information or description about your project
 st.divider()
 st.markdown(
-    '''
+    """
+    # Project Information
+    **Deepfake Detective** is a powerful web application built with **Streamlit** that leverages state-of-the-art deep learning models to detect deepfake product videos. 
+    
+    The application provides:   
+    - An **intuitive interface** for video analysis.
+    - Tools to determine video authenticity using cutting-edge models.
 
-# Project Information
-''')
+    **Created by**: *Richik Vivek Sen*
+    """
+)
