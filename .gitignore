@@ -1,0 +1,6 @@
+weights/*.pth
+!weights/.gitkeep
+uploads/
+__pycache__/
+*.pyc
+
